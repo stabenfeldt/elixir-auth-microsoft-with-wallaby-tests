@@ -55,7 +55,8 @@ defmodule App.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.5"},
-      {:elixir_auth_microsoft, "~> 1.0.0"}
+      {:elixir_auth_microsoft, "~> 1.0.0"},
+      {:wallaby, "~> 0.30", runtime: false, only: :test}
     ]
   end
 
