@@ -5,7 +5,7 @@ import Config
 config :app, AppWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
   secret_key_base: "kTguy3HgjHXffz20hqLmldE+5zNTHM1NgIRiPaZ2Fb2Mh5t+AmhghlBObtx1CByr",
-  server: false
+  server: true
 
 # In test we don't send emails
 config :app, App.Mailer, adapter: Swoosh.Adapters.Test
@@ -22,3 +22,5 @@ config :phoenix, :plug_init_mode, :runtime
 # Enable helpful, but potentially expensive runtime checks
 config :phoenix_live_view,
   enable_expensive_runtime_checks: true
+
+config :wallaby, driver: Wallaby.Chrome
