@@ -11,6 +11,7 @@ defmodule AppWeb.FrontPageFeatureTest do
   end
 
   feature "Visit the frontpage as a logged in user", %{session: session} do
+    # This fails as the user is not logged in.
     session
     |> visit("/")
     |> assert_has(css(".phx-hero", text: "Welcome John Doe"))
